@@ -7,6 +7,6 @@ before_install:
   - ./build_etcd v0.2.0
 
 script:
-  ./etcd/bin/etcd& npm test
+  ./etcd/etcd& npm test
 
 env: TRAVIS=true
