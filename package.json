@@ -1,0 +1,23 @@
+{
+  "name": "simple-etcd",
+  "version": "0.0.1",
+  "description": "An opinionated wrapper around node-etcd.",
+  "main": "index.js",
+  "dependencies": {
+    "chai": "~1.9.0",
+    "jshint": "~2.4.4",
+    "node-etcd": "~2.0.10",
+    "q": "~1.0.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.17.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "etcd"
+  ],
+  "author": "Mike Wagg <michael@guerillatactics.co.uk>",
+  "license": "ISC"
+}
