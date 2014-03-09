@@ -18,7 +18,7 @@ describe("setting values", function () {
   describe("simple values", function () {
     it("can set simple values", function (done) {
       simpleEtcd.set("test-key/setting-simpe-value", "a value")
-      .then(helper.verifyKeyHasValue("test-key/setting-simpe-value", "a value"))
+      .then(helper.verifyKeyHasValue("test-key/setting-simpe-value", JSON.stringify("a value")))
       .then(done, done);
     });
   });
@@ -37,15 +37,13 @@ describe("setting values", function () {
 
     it("can set single level deep objects", function (done) {
       simpleEtcd.set("test-key/setting-single-level-object", single)
-      .then(helper.verifyKeyHasValue("test-key/setting-single-level-object/foo", single.foo))
-      .then(helper.verifyKeyHasValue("test-key/setting-single-level-object/bar", single.bar))
+      .then(helper.verifyKeyHasValue("test-key/setting-single-level-object", JSON.stringify(single)))
       .then(done, done);
     });
 
     it("can set multiple level deep objects", function (done) {
       simpleEtcd.set("test-key/setting-multiple-level-object", multiple)
-      .then(helper.verifyKeyHasValue("test-key/setting-multiple-level-object/foo", multiple.foo))
-      .then(helper.verifyKeyHasValue("test-key/setting-multiple-level-object/bar/hey", multiple.bar.hey))
+      .then(helper.verifyKeyHasValue("test-key/setting-multiple-level-object", JSON.stringify(multiple)))
       .then(done, done);
     });
   });

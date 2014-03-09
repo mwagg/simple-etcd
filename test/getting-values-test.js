@@ -25,7 +25,7 @@ describe("getting values", function () {
 
   describe("simple values", function () {
     before(function (done) {
-      helper.setValue("test-key/getting-simple-value", "a value")
+      helper.setValue("test-key/getting-simple-value", JSON.stringify("a value"))
       .then(done, done);
     });
 
@@ -50,10 +50,8 @@ describe("getting values", function () {
 
     before(function (done) {
       Q.all([
-        helper.setValue("test-key/getting-single-level-objects/foo", single.foo),
-        helper.setValue("test-key/getting-single-level-objects/bar", single.bar),
-        helper.setValue("test-key/getting-multiple-level-objects/foo", multiple.foo),
-        helper.setValue("test-key/getting-multiple-level-objects/bar/hey", multiple.bar.hey)
+        helper.setValue("test-key/getting-single-level-objects", JSON.stringify(single)),
+        helper.setValue("test-key/getting-multiple-level-objects", JSON.stringify(multiple))
       ])
       .thenResolve()
       .then(done, done);
