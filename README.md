@@ -6,6 +6,8 @@ callback baed API.
 
 [![Build Status](https://travis-ci.org/mwagg/simple-etcd.png?branch=master)](https://travis-ci.org/mwagg/simple-etcd)
 
+[![NPM](https://nodei.co/npm/simple-etcd.png)](https://nodei.co/npm/simple-etcd/)
+
 ## Install
 
 ```
