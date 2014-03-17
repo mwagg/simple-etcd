@@ -1,6 +1,6 @@
 {
   "name": "simple-etcd",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "An opinionated wrapper around node-etcd.",
   "main": "index.js",
   "dependencies": {
